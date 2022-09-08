@@ -1,2 +1,2 @@
 # python-practice
-平时python代码练习谢谢
+平时python代码练习
