@@ -96,3 +96,9 @@ import module3
 # m3.ccc()
 # m3.foo()
 # m3.bar()
+
+
+
+import demo01 as d1
+
+d1.foo()
