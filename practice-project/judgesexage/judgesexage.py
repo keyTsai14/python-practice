@@ -36,17 +36,17 @@ def getFaceBox(net, frame, conf_threshold=0.7):
 
 
 # 性别
-genderProto = "gender_deploy.prototxt"
-genderModel = "gender_net.caffemodel"
-genderNet = cv.dnn.readNetFromCaffe(genderModel, genderProto)
+genderProto = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\gender_deploy.prototxt"
+genderModel = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\gender_net.caffemodel"
+genderNet = cv.dnn.readNet(genderModel, genderProto)
 
 # 性别参数
 genderList = ['Male', 'Female']
 
 # 年龄
-ageProto = "age_deploy.prototxt"
-ageModel = "age_net.caffemodel"
-ageNet = cv.dnn.readNetFromCaffe(ageModel, ageProto)
+ageProto = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\age_deploy.prototxt"
+ageModel = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\age_net.caffemodel"
+ageNet = cv.dnn.readNet(ageModel, ageProto)
 # 年龄参数
 ageList = ['(0 - 2)', '(4 - 6)', '(8 - 12)', '(15 - 20)', '(25 - 32)', '(38 - 43)', '(48 - 53)', '(60 - 100)']
 
@@ -54,12 +54,12 @@ MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 padding = 20
 
 # 人脸
-faceProto = 'opencv_face_detector.pbtxt'
-faceModel = 'opencv_face_detector_uint8.pb'
-faceNet = cv.dnn.readNetFromCaffe(faceModel, faceProto)
+faceProto = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\opencv_face_detector.pbtxt"
+faceModel = r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\opencv_face_detector_uint8.pb"
+faceNet = cv.dnn.readNet(faceModel, faceProto)
 
 # 图片读取
-frame = cv.imread('./demoAgeSex.jpg')
+frame = cv.imread(r"D:\key-practice-project\testgit\python-practice\practice-project\judgesexage\demoAgeSex.jpg")
 frameFace, bboxes = getFaceBox(faceNet, frame)
 
 for bbox in bboxes:
