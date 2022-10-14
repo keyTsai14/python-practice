@@ -73,7 +73,7 @@ def direction(i):
         roo.speed(2000)
 
 
-def startPrint():
+def startprint():
     i = 1
     for color in colors:
         draw(20,color)
@@ -93,4 +93,4 @@ def startPrint():
     wn.exitonclick()
 
 if __name__ == "__main__":
-    startPrint()
+    startprint()
