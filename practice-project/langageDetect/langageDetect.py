@@ -4,5 +4,5 @@
 
 from langdetect import detect
 
-text = input("输入信息：")
+text = input("input content：")
 print(detect(text))
